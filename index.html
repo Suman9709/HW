@@ -10,97 +10,109 @@
 <body>
     <h1>Day_6 HW</h1>
     <form>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th colspan="2">Form In Table</th>
-                </tr>
-            </thead>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="2">Form In Table</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td><input type="text" id="name" placeholder="Enter your Full Name" autofocus required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" id="email" placeholder="Enter your Email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="contact">Contact</label></td>
+                        <td><input type="tel" id="contact" placeholder="Enter your Contact" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Age</label></td>
+                        <td><input type="number" id="age" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">D.O.B</label></td>
+                        <td><input type="date" id="dob" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="username">Username</label></td>
+                        <td><input type="text" id="username" placeholder="Enter your Username" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password</label></td>
+                        <td><input type="password" id="password" placeholder="Enter your Password" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Gender</label></td>
+                        <td>
+                            <input type="radio" name="gender" id="gender1" required>
+                            <label for="gender1">Male</label>
+                            <input type="radio" name="gender" id="gender2">
+                            <label for="gender2">Female</label>
+                            <input type="radio" name="gender" id="gender3">
+                            <label for="gender3">Other</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
 
-            <tbody>
-                <tr>
-                    <td><label for="name">Name</label></td>
-                    <td><input type="text" id="name" placeholder="Enter your FullName" autofocus></td>
-                </tr>
-
-                <tr>
-                    <td><label for="email">Email</label></td>
-                    <td><input type="email" id="email" placeholder="Enter tour Email"></td>
-                </tr>
-
-                <tr>
-                    <td><label for="contact">Contact</label></td>
-                    <td><input type="tel" id="contact" placeholder="Enter your contact"></td>
-                </tr>
-
-                <tr>
-                    <td><label for="dob">D.O.B</label></td>
-                    <td><input type="date" id="dob"></td>
-                </tr>
-
-                <tr>
-                    <td><label for="username">Username</label></td>
-                    <td><input type="text" id="username" placeholder="Enter tour Username"></td>
-                </tr>
-
-                <tr>
-                    <td><label for="password">Password</label></td>
-                    <td><input type="password" id="password" placeholder="Enter your Password"></td>
-                </tr>
-
-                <tr>
-                    <td> <label for="gender">Gender</label></td>
-                    <td><input type="radio" name="gender" id="gender1">
-                        <label for="">Male</label>
-                        <input type="radio" name="gender" id="gender2">
-                        <label for="">Female</label>
-                        <input type="radio" name="gender" id="gender3">
-                        <label for="">Other</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="color">Favorite Color</label>
-                    </td>
-                    <td> <select id="color">
-                            <option value=""></option>
-                            <option value="red">Red</option>
-                            <option value="Black">Black</option>
-                            <option value="Green">Green</option>
-                        </select></td>
-                </tr>
-                <tr>
-                    <td><label for="rating">Rating</label>
-                    </td>
-                    <td><input type="range" id="rating" minlength="2" maxlength="5"></td>
-                </tr>
-                <tr>
-                    <td><label for="resume">Upload Your Resume</label></td>
-                    <td><input type="file" id="resume"></td>
-                </tr>
-                <tr>
-                    <td> <label for="">Interested Course</label></td>
-                    <td><input type="checkbox" id="dsa">
-                        <label for="dsa">DSA</label>
-                        <input type="checkbox" id="dev">
-                        <label for="dev">DEV</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="thoughts">Enter your thoughts</label></td>
-                    <td><textarea id="thoughts" placeholder="Enter your thoughts... "></textarea></td>
-                </tr>
-
-            <tfoot>
-                <tr>
-                    <td colspan="2" align="center"><input type="Submit" id="">
-                        <input type="Reset" id="">
-                    </td>
-                </tr>
-            </tfoot>
-
-            </tbody>
-        </table>
+        <fieldset>
+            <legend>Interest</legend>
+            <table border="1">
+                <tbody>
+                    <tr>
+                        <td><label for="color">Favorite Color</label></td>
+                        <td>
+                            <select id="color" required>
+                                <option value="" disabled selected>Select a color</option>
+                                <option value="red">Red</option>
+                                <option value="black">Black</option>
+                                <option value="green">Green</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="rating">Rating</label></td>
+                        <td><input type="range" id="rating" min="2" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="resume">Upload Your Resume</label></td>
+                        <td><input type="file" id="resume" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Interested Course</label></td>
+                        <td>
+                            <input type="checkbox" id="dsa" required>
+                            <label for="dsa">DSA</label>
+                            <input type="checkbox" id="dev">
+                            <label for="dev">DEV</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="thoughts">Enter your thoughts</label></td>
+                        <td>
+                            <textarea id="thoughts" placeholder="Enter your thoughts..." readonly>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </textarea>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit">
+                            <input type="reset">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </fieldset>
     </form>
 </body>
 
