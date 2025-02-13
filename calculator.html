@@ -4,47 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
+    <title>Square Calculator</title>
 </head>
 
-<body bgcolor="gray">
-    <h1>
-        <font color="white">Addify - Simple Calculator</font>
+<body bgcolor="#fbd6b2">
+    <h1 align="center">
+        <font color="white">Square Calculator</font>
     </h1>
 
-    <form oninput="
-        result.value = op.value == 'add' ? parseInt(num1.value) + parseInt(num2.value) :
-                      op.value == 'subtract' ? parseInt(num1.value) - parseInt(num2.value) :
-                      op.value == 'multiply' ? parseInt(num1.value) * parseInt(num2.value) :
-                      parseFloat(num1.value) / parseFloat(num2.value);
-    ">
+    <center>
+        <form oninput="
+            result.value = op.value == 'add' ? parseInt(num1.value) + parseInt(num2.value) :
+                          op.value == 'subtract' ? parseInt(num1.value) - parseInt(num2.value) :
+                          op.value == 'multiply' ? parseInt(num1.value) * parseInt(num2.value) :
+                          parseFloat(num1.value) / parseFloat(num2.value);
+        ">
 
-        <fieldset>
-            <legend><b><font color="white">Enter Numbers</font></b></legend>
-            <input type="number" id="num1" placeholder="Enter first number">
-            <br><br>
-            <input type="number" id="num2" placeholder="Enter second number">
-        </fieldset>
-        <br>
+            <table border="1" cellspacing="0" cellpadding="10" >
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <input type="number" id="num1" placeholder="First number" autofocus>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="number" id="num2" placeholder="Second number" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="op" value="add" checked> +
+                        </td>
+                        <td>
+                            <input type="radio" name="op" value="subtract"> -
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="op" value="multiply"> ×
+                        </td>
+                        <td>
+                            <input type="radio" name="op" value="divide"> ÷
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                           <font color="black"> <output name="result" id="result">0</output></font>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <fieldset>
-            <legend><b><font color="white">Choose Operation</font></b></legend>
-            <input type="radio" id="add" name="op" value="add" checked> <font color="white">Addition</font>
-            <br>
-            <input type="radio" id="subtract" name="op" value="subtract"> <font color="white">Subtraction</font>
-            <br>
-            <input type="radio" id="multiply" name="op" value="multiply"> <font color="white">Multiplication</font>
-            <br>
-            <input type="radio" id="divide" name="op" value="divide"> <font color="white">Division</font>
-        </fieldset>
-        <br>
-
-        <fieldset>
-            <legend><b><font color="white">Result</font></b></legend>
-           <font color="white"> <output name="result" id="result"></output></font>
-        </fieldset>
-
-    </form>
+        </form>
+    </center>
 </body>
 
 </html>
